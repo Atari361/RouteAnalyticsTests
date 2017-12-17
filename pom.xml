@@ -22,8 +22,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
+                    <skipTests>${skip.tests}</skipTests>
                     <suiteXmlFiles>
-                        <suiteXmlFile>resources/xmlFiles/routeTests.xml</suiteXmlFile>
+                        <suiteXmlFile>${suite.Name}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
@@ -58,4 +59,27 @@
             <version>6.11</version>
         </dependency>
     </dependencies>
+    <profiles>
+    <profile>
+        <id>no_tests</id>
+        <activation>
+            <activeByDefault>false</activeByDefault>
+        </activation>
+        <properties>
+            <skip.tests>true</skip.tests>
+            <suite.Name>resources\xmlFiles\routeTests.xml</suite.Name>
+        </properties>
+    </profile>
+
+    <profile>
+        <id>yes_tests</id>
+        <activation>
+            <activeByDefault>false</activeByDefault>
+        </activation>
+        <properties>
+            <skip.tests>false</skip.tests>
+            <suite.Name>resources\xmlFiles\routeTests.xml</suite.Name>
+        </properties>
+    </profile>
+    </profiles>
 </project>
