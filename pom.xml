@@ -63,7 +63,7 @@
     <profile>
         <id>no_tests</id>
         <activation>
-            <activeByDefault>false</activeByDefault>
+            <activeByDefault>true</activeByDefault>
         </activation>
         <properties>
             <skip.tests>true</skip.tests>
