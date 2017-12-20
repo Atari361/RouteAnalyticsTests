@@ -1,4 +1,4 @@
-package tests;
+package testExecutors;
 
 import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.WebDriver;

@@ -4,7 +4,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import pageObjectPattern.ContactsPage;
 import pageObjectPattern.HomePage;
-import tests.RouteAnalyticsTestExecutor;
+import testExecutors.RouteAnalyticsTestExecutor;
 
 public class FirstTest extends RouteAnalyticsTestExecutor {
 

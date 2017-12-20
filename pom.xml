@@ -29,6 +29,35 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <directory>target</directory>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
+
+        <testResources>
+            <testResource>
+                <directory>resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </testResource>
+            <testResource>
+                <directory>test</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.csv</include>
+                </includes>
+            </testResource>
+        </testResources>
+        <resources>
+            <resource>
+                <directory>src</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
     <dependencies>

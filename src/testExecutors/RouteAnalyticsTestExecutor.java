@@ -1,4 +1,4 @@
-package tests;
+package testExecutors;
 
 import config.AppConfig;
 import pageObjectPattern.HomePage;
