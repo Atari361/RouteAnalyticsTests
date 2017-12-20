@@ -1,3 +1,5 @@
+package mainTests;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import pageObjectPattern.ContactsPage;
