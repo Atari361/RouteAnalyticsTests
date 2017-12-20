@@ -13,14 +13,14 @@ public class BasePage {
     protected final WebDriver webDriver;
 
     private BasePage() {
-            webDriver = WebDriverUtils.createWebDriverChrome(null); // download support later
+            webDriver = WebDriverUtils.createFirefoxDriver(); // download support later
     }
 
     protected BasePage(WebDriver webDriver) {
         if (webDriver != null) {
             this.webDriver = webDriver;
         } else {
-            this.webDriver = WebDriverUtils.createWebDriverChrome(null);
+            this.webDriver = WebDriverUtils.createFirefoxDriver();
         }
     }
 

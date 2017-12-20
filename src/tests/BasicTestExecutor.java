@@ -33,7 +33,6 @@ public class BasicTestExecutor extends Assert {
             if (basePage.getWebDriver() == null) {
                 return null;
             }
-            basePage.getWebDriver().getTitle();
             return webDriver;
         } catch (WebDriverException e) {
             return null;
