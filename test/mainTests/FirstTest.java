@@ -1,15 +1,30 @@
 package mainTests;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import pageObjectPattern.ContactsPage;
 import pageObjectPattern.HomePage;
 import testExecutors.RouteAnalyticsTestExecutor;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
 public class FirstTest extends RouteAnalyticsTestExecutor {
 
     @AfterClass
     public void after(){
+
+        File file = ((FirefoxDriver) webDriver).getScreenshotAs(OutputType.FILE);
+        File destination = new File("resources/screenshots/" + this.getClass().getSimpleName() + ".png");
+        try {
+            Files.move(file.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test

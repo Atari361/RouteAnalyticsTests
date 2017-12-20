@@ -19,7 +19,7 @@ public class WebDriverUtils {
         return new ChromeDriver();
     }
 
-    public synchronized static WebDriver createFirefoxDriver(){
+    public synchronized static FirefoxDriver createFirefoxDriver(){
         return new FirefoxDriver();
     }
 }
