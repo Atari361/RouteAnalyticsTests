@@ -19,7 +19,9 @@ public class FirstTest extends RouteAnalyticsTestExecutor {
     public void after(){
 
         File file = ((FirefoxDriver) webDriver).getScreenshotAs(OutputType.FILE);
-        File destination = new File("resources/screenshots/" + this.getClass().getSimpleName() + ".png");
+        File screenshotsDir = new File("resources/screenshots/");
+        if (!screenshotsDir.exists()) screenshotsDir.mkdir();
+        File destination = new File(screenshotsDir.getPath() + "/" + this.getClass().getSimpleName() + ".png");
         try {
             Files.move(file.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
