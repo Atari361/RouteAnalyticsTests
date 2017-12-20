@@ -18,5 +18,9 @@ public class SysUtils {
         return getOperatingSystem().contains("windows");
     }
 
+    public static void main(String[] args) {
+        // Needed to avoid TestNG classpath error
+    }
+
 
 }
