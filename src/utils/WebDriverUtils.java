@@ -20,6 +20,8 @@ public class WebDriverUtils {
     }
 
     public synchronized static FirefoxDriver createFirefoxDriver(){
-        return new FirefoxDriver();
+        FirefoxDriver firefoxDriver = new FirefoxDriver();
+        firefoxDriver.manage().window().maximize();
+        return firefoxDriver;
     }
 }
